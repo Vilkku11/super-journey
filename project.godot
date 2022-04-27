@@ -14,6 +14,11 @@ config/name="Super-journey"
 run/main_scene="res://Control.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GlobalSettings="*res://Game/GlobalSettings.gd"
+Save="*res://Game/Save.gd"
+
 [display]
 
 window/size/width=1280

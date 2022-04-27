@@ -19,7 +19,7 @@ func _ready():
 func _on_Button_pressed(scene_to_load):
 	get_tree().change_scene(scene_to_load)
 
-func Exit_button(exit):
+func Exit_button(_exit):
 	get_tree().quit()
 #for button in $Menu/CenterRow/Buttons.get_children():
 #		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
