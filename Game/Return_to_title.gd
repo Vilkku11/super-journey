@@ -1,5 +1,10 @@
 extends Node
 
+func _on_Button_pressed():
+	get_tree().change_scene("res://Control.tscn")
+	
+
+
 #Video Settings
 onready var display_options = $FullscreenBTN/FullscreenBtn
 
@@ -8,10 +13,5 @@ func _ready():
 	GlobalSettings.toggle_fullscreen(Save.game_data.fullscreen_on)
 
 
-func _on_DisplayOptionBtn_item_selected(index):
+func _on_FullscreenBtn_item_selected(index):
 	GlobalSettings.toggle_fullscreen(true if index == 1 else false)
-
-
-func _on_Button_pressed():
-	get_tree().change_scene("res://Control.tscn")
-	
