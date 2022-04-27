@@ -19,7 +19,6 @@ config/icon="res://icon.png"
 GlobalSettings="*res://Game/GlobalSettings.gd"
 Save="*res://Game/Save.gd"
 
-
 [display]
 
 window/size/width=1280
