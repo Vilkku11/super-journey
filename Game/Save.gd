@@ -22,7 +22,7 @@ func load_data():
 		save_data()
 	file.open(SAVEFILE, file.READ)
 	game_data = file.get_var()
-	file.close
+	file.close()
 	
 func save_data():
 		var file = File.new()
