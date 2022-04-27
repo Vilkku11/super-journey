@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Font/kongtext/kongtext.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Title_screen/Buttons/MenuButton.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
@@ -12,6 +13,7 @@ margin_right = 1040.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 360, 60 )
 flat = true
+script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
 margin_right = 40.0
