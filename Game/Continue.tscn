@@ -11,6 +11,3 @@ margin_right = 1096.0
 [node name="Label" parent="CenterContainer/VBoxContainer" index="0"]
 margin_right = 912.0
 text = "COntinued          "
-
-[node name="Button" parent="CenterContainer/VBoxContainer/Label" index="0"]
-flat = true
