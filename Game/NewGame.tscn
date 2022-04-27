@@ -42,5 +42,6 @@ rect_min_size = Vector2( 360, 60 )
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 text = "back"
+flat = true
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Label/Button" to="." method="_on_Button_pressed"]
