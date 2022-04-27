@@ -1,2 +1,2 @@
 # super-journey
-Testi1
+Super-journey
