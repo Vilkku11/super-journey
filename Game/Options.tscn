@@ -1,13 +1,117 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Game/NewGame.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Font/kongtext/kongtext.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 2 )
 
 [node name="Options" instance=ExtResource( 1 )]
+margin_left = 1.0
+
+[node name="CenterContainer" parent="." index="0"]
+anchor_left = -0.00547303
+anchor_right = -0.00547303
+anchor_bottom = 0.0
+margin_top = 24.0
+margin_right = 404.0
+margin_bottom = 84.0
 
 [node name="VBoxContainer" parent="CenterContainer" index="0"]
-margin_left = 460.0
-margin_right = 820.0
+margin_left = 22.0
+margin_top = 0.0
+margin_right = 382.0
+margin_bottom = 60.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
 [node name="Label" parent="CenterContainer/VBoxContainer" index="0"]
 margin_right = 360.0
 text = "Options"
+
+[node name="Button" parent="CenterContainer/VBoxContainer/Label" index="0"]
+margin_left = 450.0
+margin_top = 607.0
+margin_right = 810.0
+margin_bottom = 667.0
+
+[node name="Video Settings" type="Label" parent="CenterContainer/VBoxContainer/Label" index="1"]
+margin_left = 23.0
+margin_top = 127.0
+margin_right = 359.0
+margin_bottom = 151.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Video Settings"
+
+[node name="Audio" type="Label" parent="CenterContainer/VBoxContainer/Label" index="2"]
+margin_left = 845.0
+margin_top = 127.0
+margin_right = 1025.0
+margin_bottom = 151.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Audio"
+
+[node name="Fullscreen" type="Label" parent="CenterContainer/VBoxContainer/Label" index="3"]
+margin_left = 50.0
+margin_top = 225.0
+margin_right = 296.0
+margin_bottom = 257.0
+custom_fonts/font = SubResource( 2 )
+text = "Fullscreen"
+
+[node name="Master Volume" type="Label" parent="CenterContainer/VBoxContainer/Label" index="4"]
+margin_left = 750.0
+margin_top = 225.0
+margin_bottom = 257.0
+custom_fonts/font = SubResource( 2 )
+text = "Master Volume"
+
+[node name="Max FPS" type="Label" parent="CenterContainer/VBoxContainer/Label" index="5"]
+margin_left = 50.0
+margin_top = 325.0
+margin_bottom = 298.0
+custom_fonts/font = SubResource( 2 )
+text = "Max FPS"
+
+[node name="VSync" type="Label" parent="CenterContainer/VBoxContainer/Label" index="6"]
+margin_left = 50.0
+margin_top = 375.0
+margin_bottom = 338.0
+custom_fonts/font = SubResource( 2 )
+text = "VSync"
+
+[node name="Music Volume" type="Label" parent="CenterContainer/VBoxContainer/Label" index="7"]
+margin_left = 750.0
+margin_top = 275.0
+margin_bottom = 257.0
+custom_fonts/font = SubResource( 2 )
+text = "Music Volume"
+
+[node name="Dialogue Volume" type="Label" parent="CenterContainer/VBoxContainer/Label" index="8"]
+margin_left = 750.0
+margin_top = 325.0
+margin_bottom = 257.0
+custom_fonts/font = SubResource( 2 )
+text = "Dialogue Volume"
+
+[node name="Other Volume" type="Label" parent="CenterContainer/VBoxContainer/Label" index="9"]
+margin_left = 750.0
+margin_top = 375.0
+margin_bottom = 257.0
+custom_fonts/font = SubResource( 2 )
+text = "Other"
+
+[node name="Resolution" type="Label" parent="CenterContainer/VBoxContainer/Label" index="10"]
+margin_left = 50.0
+margin_top = 275.0
+margin_right = 296.0
+margin_bottom = 257.0
+custom_fonts/font = SubResource( 2 )
+text = "Resolution"
