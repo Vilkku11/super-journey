@@ -15,3 +15,4 @@ func _ready():
 
 func _on_FullscreenBtn_item_selected(index):
 	GlobalSettings.toggle_fullscreen(true if index == 1 else false)
+
