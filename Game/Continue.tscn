@@ -24,6 +24,7 @@ margin_right = 1248.0
 margin_bottom = 94.0
 
 [node name="Label" parent="CenterContainer/VBoxContainer" index="0"]
+
 margin_right = 1248.0
 margin_bottom = 60.0
 text = "Pick a save to continue   "
@@ -63,3 +64,6 @@ margin_bottom = 481.0
 custom_fonts/font = SubResource( 1 )
 text = "Load a Savepoint"
 flat = true
+=======
+margin_right = 912.0
+text = "COntinued          "
