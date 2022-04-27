@@ -150,3 +150,5 @@ text = "Windowed"
 flat = true
 items = [ "Windowed", null, false, 0, null, "Fullscreen", null, false, 1, null ]
 selected = 0
+
+[connection signal="item_selected" from="FullscreenBTN/FullscreenBtn" to="." method="_on_FullscreenBtn_item_selected"]
