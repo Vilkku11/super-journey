@@ -8,4 +8,4 @@ margin_bottom = 60.0
 text = "Exit"
 
 [node name="Label" parent="." index="0"]
-text = "Exit the Game"
+text = "Quit"
