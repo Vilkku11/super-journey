@@ -145,6 +145,12 @@ margin_bottom = 338.0
 custom_fonts/font = SubResource( 2 )
 text = "Brightness"
 
+[node name="VSyncButton" type="CheckButton" parent="CenterContainer/VBoxContainer/Label" index="13"]
+margin_left = 456.0
+margin_top = 374.0
+margin_right = 532.0
+margin_bottom = 414.0
+
 [node name="FullscreenBTN" type="CenterContainer" parent="." index="1"]
 margin_left = 389.0
 margin_top = 250.0
@@ -153,7 +159,7 @@ margin_bottom = 272.0
 script = ExtResource( 3 )
 
 [node name="FullscreenBtn" type="OptionButton" parent="FullscreenBTN" index="0"]
-margin_right = 157.0
+margin_right = 200.0
 margin_bottom = 22.0
 custom_fonts/font = SubResource( 3 )
 text = "Windowed"
@@ -162,4 +168,5 @@ items = [ "Windowed", null, false, 0, null, "Fullscreen", null, false, 1, null ]
 selected = 0
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Label/BackButton" to="CenterContainer" method="_on_Button_pressed"]
+[connection signal="toggled" from="CenterContainer/VBoxContainer/Label/VSyncButton" to="." method="_on_VSyncButton_toggled"]
 [connection signal="item_selected" from="FullscreenBTN/FullscreenBtn" to="." method="_on_FullscreenBtn_item_selected"]
