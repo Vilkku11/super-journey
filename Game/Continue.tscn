@@ -65,5 +65,3 @@ margin_bottom = 481.0
 custom_fonts/font = SubResource( 1 )
 text = "Load a Savepoint"
 flat = true
-
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Label/BackButton" to="CenterContainer" method="_on_BackButton_pressed"]
