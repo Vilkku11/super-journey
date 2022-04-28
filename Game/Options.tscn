@@ -159,7 +159,7 @@ margin_bottom = 272.0
 script = ExtResource( 3 )
 
 [node name="FullscreenBtn" type="OptionButton" parent="FullscreenBTN" index="0"]
-margin_right = 200.0
+margin_right = 157.0
 margin_bottom = 22.0
 custom_fonts/font = SubResource( 3 )
 text = "Windowed"
