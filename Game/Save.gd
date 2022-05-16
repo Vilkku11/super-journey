@@ -24,6 +24,11 @@ func load_data():
 	file.open(SAVEFILE, File.READ)
 	game_data = file.get_var()
 	file.close()
+	GlobalSettings.toggle_fullscreen(game_data.fullscreen_on)
+	GlobalSettings.toggle_vsync(game_data.vsync_on)
+	
+	
+	
 	
 func save_data():
 		var file = File.new()
