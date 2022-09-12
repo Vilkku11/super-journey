@@ -7,7 +7,7 @@
 height = 28.0
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 32, 55 )
+collision_mask = 4
 script = ExtResource( 2 )
 
 [node name="Paahahmov2" type="Sprite" parent="."]
