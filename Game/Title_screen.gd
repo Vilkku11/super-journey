@@ -3,7 +3,8 @@ extends Control
 
 
 func _ready():
-	for n in 4:
+	var button_count = $Menu/CenterRow/Buttons.get_child_count()
+	for n in button_count:
 		#var button = $Menu/CenterRow/Buttons.getChild(n)
 		if $Menu/CenterRow/Buttons.get_child(n) == $Menu/CenterRow/Buttons.get_child(3):
 			var button = $Menu/CenterRow/Buttons.get_child(n)
