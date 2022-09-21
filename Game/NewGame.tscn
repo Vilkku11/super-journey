@@ -62,3 +62,4 @@ text = "Yes"
 flat = true
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Label/BackButton" to="CenterContainer" method="_on_BackButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Label/YesButton" to="CenterContainer" method="_on_YesButton_pressed"]
