@@ -9,6 +9,7 @@ func _physics_process(delta: float) -> void:
 	#	$AnimationPlayer.play("Movement")
 	velocity = speed * direction
 	_animation(velocity)
+	
 		
 		
 func _ready():

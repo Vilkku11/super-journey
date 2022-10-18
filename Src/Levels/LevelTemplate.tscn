@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/testblock.png" type="Texture" id=1]
 [ext_resource path="res://Src/Actors/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Src/Levels/FpsCounter.gd" type="Script" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
@@ -41,3 +42,8 @@ tile_data = PoolIntArray( 196623, 0, 0, 262159, 0, 0, 327695, 0, 0, 393216, 0, 0
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 135, 377 )
+
+[node name="FpsCounter" type="Label" parent="."]
+margin_right = 67.0
+margin_bottom = 31.0
+script = ExtResource( 3 )
