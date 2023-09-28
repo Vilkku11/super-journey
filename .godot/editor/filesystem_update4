@@ -1,0 +1,7 @@
+res://default_env.tres
+res://Player/Player.tscn
+res://World.tscn
+res://world.gd
+res://Src/Levels/LevelTemplate.tscn
+res://Src/Actors/Player.tscn
+res://Player/Player.gd

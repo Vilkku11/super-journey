@@ -1,0 +1,125 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3yb4aac0e43j"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_l8eb3"]
+[ext_resource type="Script" path="res://FpsCounter.gd" id="3_5qbge"]
+[ext_resource type="FontFile" uid="uid://dv608myyqad3h" path="res://Font/kongtext/kongtext.ttf" id="3_5unee"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_l8eb3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainMenu" type="PanelContainer" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MainMenuText" type="Label" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5unee")
+theme_override_font_sizes/font_size = 40
+text = " SUPER JOURNEY"
+horizontal_alignment = 1
+
+[node name="Buttons" type="MarginContainer" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="NewGameBtn" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Buttons/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("3_5unee")
+theme_override_font_sizes/font_size = 35
+text = "New Game"
+flat = true
+
+[node name="OptionsBtn" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Buttons/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("3_5unee")
+theme_override_font_sizes/font_size = 35
+text = "Options"
+flat = true
+
+[node name="QuitBtn" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Buttons/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("3_5unee")
+theme_override_font_sizes/font_size = 35
+text = "Quit"
+flat = true
+
+[node name="VersionLB" type="Label" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Buttons/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5unee")
+text = "Ver. 0.0.1"
+
+[node name="Options" type="PanelContainer" parent="CanvasLayer"]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Options"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Options/MarginContainer"]
+layout_mode = 2
+
+[node name="OptionsText" type="Label" parent="CanvasLayer/Options/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5unee")
+theme_override_font_sizes/font_size = 40
+text = "OPTIONS"
+horizontal_alignment = 1
+
+[node name="ShowFpsBtn" type="CheckButton" parent="CanvasLayer/Options/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5unee")
+text = "Show fps"
+flat = true
+
+[node name="NewGame" type="PanelContainer" parent="CanvasLayer"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/NewGame"]
+layout_mode = 2
+
+[node name="NewGameText" type="Label" parent="CanvasLayer/NewGame/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5unee")
+text = "NEW GAME"
+
+[node name="FpsCounter" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_5unee")
+script = ExtResource("3_5qbge")
+
+[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Buttons/VBoxContainer/NewGameBtn" to="." method="_on_new_game_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Buttons/VBoxContainer/OptionsBtn" to="." method="_on_options_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Buttons/VBoxContainer/QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="toggled" from="CanvasLayer/Options/MarginContainer/VBoxContainer/ShowFpsBtn" to="." method="_on_show_fps_btn_toggled"]
