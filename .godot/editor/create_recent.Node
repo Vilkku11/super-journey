@@ -1,0 +1,11 @@
+AnimationPlayer
+Sprite2D
+CollisionShape2D
+CharacterBody2D
+Label
+CheckButton
+VBoxContainer
+MarginContainer
+PanelContainer
+Button
+CanvasLayer
